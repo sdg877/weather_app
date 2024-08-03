@@ -1,4 +1,3 @@
-
 import axios from "axios";
 
 export function getWeather(lat, lon, timezone) {
@@ -12,10 +11,12 @@ export function getWeather(lat, lon, timezone) {
             },
         }
     ).then(({ data }) => {
+        console.log('API response:', data); 
+        const weatherData = Array.isArray(data) ? data[0] : data; 
         return {
-            current: parseCurrentWeather(data),
-            daily: parseDailyWeather(data),
-            hourly: parseHourlyWeather(data)
+            current: parseCurrentWeather(weatherData),
+            daily: parseDailyWeather(weatherData),
+            hourly: parseHourlyWeather(weatherData)
         };
     });
 }
