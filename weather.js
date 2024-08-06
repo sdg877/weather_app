@@ -11,7 +11,6 @@ export function getWeather(lat, lon, timezone) {
             },
         }
     ).then(({ data }) => {
-        console.log('API response:', data); 
         const weatherData = Array.isArray(data) ? data[0] : data; 
         return {
             current: parseCurrentWeather(weatherData),
