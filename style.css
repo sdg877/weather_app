@@ -114,3 +114,29 @@ body {
 .hour-row > td {
   padding: 0.25rem 0.5rem;
 }
+
+.search-container {
+  display: flex;
+  align-items: center;
+  margin: 1rem;
+}
+
+#postcode-input {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 0.5rem;
+}
+
+#search-button {
+  padding: 0.5rem 1rem;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#search-button:hover {
+  background-color: #45a049;
+}
