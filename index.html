@@ -3,16 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
   </head>
   <body class="blurred">
     <header class="header">
-      <div class ="header-left">
-        <img class="weather-icon large" src="icons/sun.svg" data-current-icon>
+      <div class="header-left">
+        <img class="weather-icon large" src="/icons/sun.svg" alt="Current weather icon" data-current-icon />
         <div class="header-current-temp">
           <span data-current-temp>31</span>&deg;
         </div>
       </div>
-      <div class='header-right'>
+      <div class="header-right">
         <div class="info-group">
           <div class="label">High</div>
           <div><span data-current-high>27</span>&deg;</div>
@@ -39,59 +40,61 @@
         </div>
         <div class="info-group">
           <div class="label">UV Index</div>
-          <div><span data-current-uv-index>7</span></div> 
+          <div><span data-current-uv-index>7</span></div>
         </div>
         <div class="info-group">
           <div class="label">Sunrise</div>
-          <div><span data-current-sunrise>6:00 AM</span></div> 
+          <div><span data-current-sunrise>6:00 AM</span></div>
         </div>
         <div class="info-group">
           <div class="label">Sunset</div>
-          <div><span data-current-sunset>5:00 PM</span></div> 
+          <div><span data-current-sunset>5:00 PM</span></div>
         </div>
       </div>
       <div class="search-container">
         <input type="text" id="postcode-input" placeholder="Enter postcode" />
         <button id="search-button">Get Weather</button>
-    </div>
+      </div>
     </header>
+
     <section class="day-section" data-day-section>
       <div class="day-card">
-        <img src="icons/cloud.svg" class="weather-icon">
+        <img src="/icons/cloud.svg" class="weather-icon" alt="Cloudy weather icon" />
         <div class="day-card-day">Monday</div>
         <div>32&deg;</div>
       </div>
       <div class="day-card">
-        <img src="icons/cloud.svg" class="weather-icon">
+        <img src="/icons/cloud.svg" class="weather-icon" alt="Cloudy weather icon" />
         <div class="day-card-day">Tuesday</div>
         <div>32&deg;</div>
       </div>
       <div class="day-card">
-        <img src="icons/cloud.svg" class="weather-icon">
+        <img src="/icons/cloud.svg" class="weather-icon" alt="Cloudy weather icon" />
         <div class="day-card-day">Wednesday</div>
         <div>32&deg;</div>
       </div>
       <div class="day-card">
-        <img src="icons/cloud.svg" class="weather-icon">
+        <img src="/icons/cloud.svg" class="weather-icon" alt="Cloudy weather icon" />
         <div class="day-card-day">Thursday</div>
         <div>32&deg;</div>
       </div>
       <div class="day-card">
-        <img src="icons/cloud.svg" class="weather-icon">
+        <img src="/icons/cloud.svg" class="weather-icon" alt="Cloudy weather icon" />
         <div class="day-card-day">Friday</div>
         <div>32&deg;</div>
       </div>
       <div class="day-card">
-        <img src="icons/cloud.svg" class="weather-icon">
+        <img src="/icons/cloud.svg" class="weather-icon" alt="Cloudy weather icon" />
         <div class="day-card-day">Saturday</div>
         <div>32&deg;</div>
       </div>
       <div class="day-card">
-        <img src="icons/cloud.svg" class="weather-icon">
+        <img src="/icons/cloud.svg" class="weather-icon" alt="Cloudy weather icon" />
         <div class="day-card-day">Sunday</div>
         <div>32&deg;</div>
       </div>
     </section>
+
     <table class="hour-section">
       <tbody data-hour-section>
         <tr class="hour-row">
@@ -102,7 +105,7 @@
             </div>
           </td>
           <td>
-            <img src="icons/cloud.svg" class="weather-icon">
+            <img src="/icons/cloud.svg" class="weather-icon" alt="Cloudy weather icon" />
           </td>
           <td>
             <div class="info-group">
@@ -114,26 +117,29 @@
             <div class="info-group">
               <div class="label">FL Temp</div>
               <div>25&deg;</div>
+            </div>
           </td>
           <td>
             <div class="info-group">
               <div class="label">Wind</div>
               <div>26<span class="value-sub-info">mph</span></div>
+            </div>
           </td>
           <td>
             <div class="info-group">
               <div class="label">Precip</div>
               <div>0<span class="value-sub-info">in</span></div>
+            </div>
           </td>
         </tr>
-       </tbody>
+      </tbody>
     </table>
 
     <template id="day-card-template">
       <div class="day-card">
-        <img data-icon class="weather-icon">
+        <img data-icon class="weather-icon" alt="Weather icon" />
         <div class="day-card-day" data-date></div>
-        <div><span data-temp></span><span>&deg;</span></div>
+        <div><span data-temp></span>&deg;</div>
       </div>
     </template>
 
@@ -146,7 +152,7 @@
           </div>
         </td>
         <td>
-          <img data-icon class="weather-icon">
+          <img data-icon class="weather-icon" alt="Weather icon" />
         </td>
         <td>
           <div class="info-group">
@@ -174,6 +180,7 @@
         </td>
       </tr>
     </template>
-    <script type="module" src="/main.js"></script>
+
+    <script type="module" src="./main.js"></script>
   </body>
 </html>
